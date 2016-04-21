@@ -155,9 +155,11 @@ font-size: 4.2vmin;
 	letter-spacing: 2px;
 	text-shadow: rgb(97, 97, 97) 1px 1px 0px, rgb(121, 120, 120) 0px 2px 0px, rgba(134, 116, 89, 0.72) 0px 3px 0px, rgba(140, 140, 140, 0.498039) 0px 4px 0px, rgb(120, 120, 120) 0px 0px 0px, rgba(0, 0, 0, 0.498039) 0px 5px 10px;
 }
-.group{
+.section p.cap img.group{
 	margin-top: 5%; 
-	border-radius: 4%; 
+	border-radius: 4%;
+	max-width: 40%;
+    max-height: 40%;
 }
 @media screen and (max-width: 768px) {
  .intro .mid-text{
