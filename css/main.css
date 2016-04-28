@@ -118,7 +118,7 @@ text-align: center;
   	background-attachment: fixed;
 }
 .section4{
-	background: url("../img/chess.jpg") no-repeat;
+	background: url("../img/bik.jpg") no-repeat;
     background-size: cover;
   	background-attachment: fixed;
 }
@@ -137,6 +137,9 @@ text-align: center;
  height: 100%;
  margin: 0;
  padding: 0;
+}
+.section .overlaywhite{
+background-color: rgba(256, 256, 256, 0.5);
 }
 /*.section .ride{
  background: url("../img/ride.gif") no-repeat;
@@ -171,6 +174,74 @@ font-size: 4.2vmin;
 	max-width: 40%;
     max-height: 40%;
 }
+.section5{
+	background: url("../img/bw4.png") no-repeat;
+    background-size: cover;
+  	background-attachment: fixed;
+}
+.slider-half{
+	width: 50%;
+	height: 100vh;
+	position: relative;
+	display: table;
+	float: left;
+	color: #fff;
+}
+.left-set p{
+display: table-cell;
+vertical-align: middle;
+color: #FBE531;
+font-size: 2em;
+text-align: center;
+background-color: rgba(59, 59, 59, 0.60);
+}
+.right-set{
+	overflow-y: auto;
+	display: table-cell;
+	background: url("../img/man.jpg") no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.right-set .box{
+width: 98%;
+background-color: rgba(59, 59, 59, 0.70);
+padding: 30px 1%;
+text-align: center;
+border-bottom: 1px solid #777777;
+}
+.right-set .box .person{
+color: #FBE531;
+font-style: italic;
+clear: both;
+font-size: 0.8em;
+}
+.grp-img-container{
+	color: #E5FF63;
+}
+.grp-img{
+	width: 250px;
+	margin: 10px;
+	display: inline-block;
+}
+.grp-img .img{
+	max-height: 90%;
+	max-width: 90%;
+	border-radius: 5%;
+
+	-webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+.grp-img .img:hover{
+	max-height: 100%;
+	max-width: 100%;
+}
+
+
+
+/*media query*/
 @media screen and (max-width: 768px) {
  .intro .mid-text{
 	font-size: 15vmin;
