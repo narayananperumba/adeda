@@ -74,28 +74,34 @@ margin: 0px auto;
 .text-center{
 text-align: center;
 }
-.footer{
-	color: #fff;
+.header{
 	position: fixed;
-	bottom: 0;
-	background-color: rgba(59, 59, 59, 0.5701961);
+	top: 0;
 }
-.footer .logo-container{
+.header .logo-container{
 	color: #f39c12;
 	font-size: 1em;
 	margin: 0;
-	margin-left: 5px;
 	display: inline-block;
-	padding-top: 5px;
+    padding: 10px;
+    border-radius: 3px;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(61,61,61,1);
+	-moz-box-shadow: 2px 2px 5px 0px rgba(61,61,61,1);
+	box-shadow: 2px 2px 5px 0px rgba(61,61,61,1);
 }
-.footer .logo-container .logo{
-    width:55px;
-    height:40px;
-    background: url("../img/eager.png") no-repeat;
+.header .logo-container .logo{
+    width:70px;
+    height:60px;
+    background: url("../img/elg.png") no-repeat;
     background-size: contain;
 }
+.footer{
+	color: #cacaca;
+	position: fixed;
+	bottom: 0;
+}
 .footer .copy{
-	font-size: 0.5em;
+	font-size: 0.6em;
 	display: inline-block;
 }
 .section{
@@ -132,14 +138,17 @@ text-align: center;
 	transition: all 0.5s ease 0s;
 }
 .section .overlay{
- background-color: rgba(59, 59, 59, 0.6);
+ background-color: rgba(0, 0, 0, 0.6);
  width: 100%;
  height: 100%;
  margin: 0;
  padding: 0;
 }
-.section .overlaywhite{
-background-color: rgba(256, 256, 256, 0.5);
+.section .overlay.dark{
+background-color: rgba(0, 0, 0, 0.85);
+}
+.section .overlay.light{
+background-color: rgba(255, 223, 173, 0.34);
 }
 /*.section .ride{
  background: url("../img/ride.gif") no-repeat;
@@ -217,6 +226,8 @@ font-size: 0.8em;
 }
 .grp-img-container{
 	color: #E5FF63;
+	overflow: auto;
+    height: 100%;
 }
 .grp-img{
 	width: 250px;
@@ -243,6 +254,12 @@ font-size: 0.8em;
 
 /*media query*/
 @media screen and (max-width: 768px) {
+.section{
+		background-position: 30%;
+	}
+.section5{
+	background-position: 0;
+}
  .intro .mid-text{
 	font-size: 15vmin;
 }
@@ -253,7 +270,17 @@ font-size: 0.8em;
 	margin-top: 25%; 
 	max-width: 350px;
     max-height: 350px;
-} 
+}
+.slider-half{
+	width: 100%;
+	height: auto;
+}
+.right-set{
+	background-position: 50% 0;
+}
+.left-set p{
+	font-size: 1.4em;
+}
 }
 @media screen and (max-width: 570px) {
 
