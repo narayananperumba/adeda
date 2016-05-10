@@ -294,3 +294,58 @@ font-size: 0.8em;
     max-height: 280px;
 } 
 }
+
+
+.card{
+  border: 1px solid #333;
+  border-radius: 3px;
+  background: url('../img/bw2.jpg') no-repeat;
+  background-size: cover;
+  width: auto;
+  margin: 0 auto;
+  max-width: 400px;
+  color: #fff;
+  line-height: 1.5;
+}
+.card h1{
+  font-size: 1.2em;
+  font-weight: normal;
+}
+.card h3{
+  font-size: 1em;
+  color: #999;
+  font-weight: normal;
+}
+.card a{
+ font-size: .9em;
+}
+.card ul li{
+  display: inline-block;
+  font-size: 0.7em;
+  color: #bdbdbd;
+  border-right: 1px solid #777;
+  padding-right: 5px;
+}
+.card ul{
+  display: inline;
+  border-left: 3px double #999;
+  padding-left: 5px;
+}
+.overlay{
+ background-color: rgba(0, 0, 0, 0.75);
+ height: 100%;
+ margin: 0;
+ padding: 10px;
+}
+.card hr{
+  margin: 0.3em 0;
+  padding: 0;
+  border-top: 1px solid #888;
+  width: 100%;
+}
+.card a, .card a:hover, .card a:visited{
+  color: #D8A56F;
+}
+a.social{
+  font-size: 2vmin;
+}
