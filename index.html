@@ -67,7 +67,7 @@ makes the difference!!!
   <!-- <p class="text-center cap"> <img class="group" src="img/group.png"></p> -->
 </div>
 </section>
-
+<div class="divider fw"></div>
 <section class="section section5">
 <div class="overlay">
   <div class="slider-half left-set"> <p>An art of team work</p></div>
@@ -93,6 +93,118 @@ makes the difference!!!
 
     </div>
 </div>
+</section>
+<div class="divider fw"></div>
+<section class="section section7">
+<div class="overlay">
+  <div class="fw text-center" style="padding-top:10%;">
+  <h5 class='white'>Time is the longest distance between two places..</h5>
+  <canvas id="canvas" width="360" height="360"></canvas>
+  <br/><h3 class='white'>Drive slow and enjoy the scenery - drive fast and join the scenery !!!</h3>
+  </div>
+  <script>
+  var canvas = document.getElementById("canvas");
+
+  var ctx = canvas.getContext("2d");
+  var radius = canvas.height / 2;
+  ctx.translate(radius, radius);
+  radius = radius * 0.90
+  drawClock();
+
+  function drawClock() {
+    ctx.arc(0, 0, radius, 0 , 2*Math.PI);
+    //ctx.fillStyle = "white";
+    //ctx.fill();
+    drawFace(ctx, radius);
+    drawNumbers(ctx, radius);
+    drawTime(ctx, radius);
+  }
+
+  function drawFace(ctx, radius) {
+    var grad;
+
+    ctx.beginPath();
+    ctx.arc(0, 0, radius, 0, 2*Math.PI);
+    //ctx.fillStyle = 'white';
+    //ctx.fill();​
+
+
+    grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+    grad.addColorStop(0, '#777');
+    /*grad.addColorStop(0.5, 'white');
+    grad.addColorStop(1, '#333');*/
+    ctx.strokeStyle = grad;
+    ctx.lineWidth = radius*0.012;
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+    ctx.fillStyle = '#888';
+    ctx.fill();
+  }
+
+  function drawNumbers(ctx, radius) {
+    var ang;
+    var num;
+    var dot='\u00B7';
+    ctx.font = radius*0.07 + "px arial";
+    ctx.textBaseline="middle";
+    ctx.textAlign="center";
+    var disp =0;
+    for(num= 0; num < 24 * 4 * 3; num++){
+        ang = num * Math.PI / (12 * 4 * 3); //24hr
+        ctx.rotate(ang);
+        ctx.translate(0, -radius*0.90);
+        ctx.rotate(-ang);
+        if(num%12 == 0){
+          ctx.font = radius*0.06 + "px arial";
+          ctx.fillStyle = '#fff';
+          ctx.fillText(disp.toString(), 0, 0);
+        }
+        else if(num%3 == 0){
+          ctx.font = radius*0.08 + "px arial";        
+          ctx.fillStyle = '#888';
+          ctx.fillText(dot, 0, 0);
+        }else{
+          ctx.font = radius*0.04 + "px arial";
+          ctx.fillStyle = '#666';
+          ctx.fillText(dot, 0, 0);          
+        }
+          
+
+        ctx.rotate(ang);
+        ctx.translate(0, radius*0.90);
+        ctx.rotate(-ang);
+
+        if(num%12 == 0)
+          disp++;
+    }
+}
+
+function drawTime(ctx, radius){
+  var now = new Date();
+  var hour = now.getHours();
+  var minute = now.getMinutes();
+  var second = now.getSeconds();
+  var timeInSec = (hour * 60 * 60) + (minute * 60) + second;
+    daySec = 86400 / 2;
+    fullday=(timeInSec*Math.PI/daySec);
+    drawHand(ctx, fullday, radius*0.90, radius*0.01);
+}
+
+function drawHand(ctx, pos, length, width) {
+  ctx.beginPath();
+  ctx.lineWidth = width;
+  ctx.lineCap = "round";
+  ctx.moveTo(0,0);
+  ctx.rotate(pos);
+  ctx.lineTo(0, -length);
+  ctx.stroke();
+  ctx.rotate(-pos);
+}
+setInterval(drawClock, 1000);
+</script>
+</div>  
 </section>
 <section class="section section6">
 <div class="overlay">
